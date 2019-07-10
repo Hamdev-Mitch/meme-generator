@@ -4,31 +4,101 @@
     <meta charset="utf-8">
     <title>Meme Generator</title>
     <link rel="stylesheet" href="css/master.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" />
+     <script src="js/uikit.min.js"></script>
+     <script src="js/uikit-icons.min.js"></script>
   </head>
+
+
+
   <body>
+
+  <!-- NAV BAR START-->
+  <nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-center">
+        <div class="uk-navbar-center-left"><div>
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a href="#">about</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">bla</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div></div>
+        <a class="uk-navbar-item uk-logo" href="#"><h1 class="navLogo">memeGen</h1></a>
+        <div class="uk-navbar-center-right"><div>
+            <ul class="uk-navbar-nav">
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div></div>
+    </div>
+</nav>
+<!-- NAV BAR END -->
+
+<!-- MAIN CONTAINER START -->
+<div class="uk-container" id="main">
     <div class="titleContainer">
         <h1>Meme Generator</h1>
     </div>
-  <div class="memeContainer">
-    <canvas id="c" width="400" height="400"></canvas>
-  </div>
+    <div class="uk-child-width-expand@s" uk-grid>
+    <div class="uk-grid-item-match">
+        <div class="uk-card uk-card-default uk-card-body">
+        <canvas id="c" width="400" height="400"></canvas>
+        </div>
+     </div>
+    <div>
+        <h3>TOP TEXT</h3>
+        <div class="uk-margin">
+        <input class="uk-input uk-form-width-medium" type="text" placeholder="Enter Top Text">
+    </div>
+        <h3>BOTTOM TEXT</h3>
+        <div class="uk-margin">
+          <input class="uk-input uk-form-width-medium" type="text" placeholder="Enter Bottom Text">
+      </div>
+        <h3>MEME TITLE</h3>
+        <div class="uk-margin">
+          <input class="uk-input uk-form-width-medium" type="text" placeholder="(Optional)">
+      </div>
+<button class="uk-button uk-button-secondary uk-button-large">Make Meme</button>
 
-  <div class="buttonContainer">
+
+
+    </div>
+</div>
+
+  <br>
+  <!-- Button Container -->
+    <div class="uk-animation-toggle" id="buttonContainer" tabindex="0">
+        <div class="uk-card uk-card-default uk-card-body">
     <!-- Buttons to select default Meme Image -->
-  <h2>Select Your Meme</h2>
-    <button type="button" id="brianButton" name="BadLuckBrian">Bad Luck Brian</button>
-    <button type="button" id="oneDoesNotButton" name="OneDoesNotSimply">One Does Not Simply</button>
-    <button type="button" id="kermitTea" name="KermitTea">Kermit Tea</button>
-    <button type="button" id="andItsGone" name="andItsGone">And it's gone!</button>
-    <button type="button" id="awkwardSeal" name="awkwardSeal">Awkward Seal</button>
-    <button type="button" id="burntMicrowave" name="burntMicrowave">Burnt Microwave</button>
-    <button type="button" id="trumpMeme" name="trumpMeme">Trump</button>
+  <h2>Change Picture</h2>
+  <p uk-margin>
+    <button class="uk-button uk-button-default uk-button-large">Bad Luck Brian</button>
+    <button class="uk-button uk-button-default uk-button-large">One Does Not Simply</button>
+    <button class="uk-button uk-button-default uk-button-large">Kermit Tea</button>
+        <button class="uk-button uk-button-default uk-button-large">Lucky Baby</button>
+    <br>
+    <button class="uk-button uk-button-default uk-button-large">Awkward Seal</button>
+    <button class="uk-button uk-button-default uk-button-large">Burnt Microwave</button>
+    <button class="uk-button uk-button-default uk-button-large">Trump</button>
+    <button class="uk-button uk-button-default uk-button-large">Steve Carrell</button>
   </div>
+</div>
   <div class="">
     <canvas id="d" width="400" height="400"></canvas>
   </div>
-
+</div>
+<!-- MAIN CONTAINER END-->
 
 <script src="js/javascript.js" charset="utf-8"></script>
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
   </body>
 </html>
