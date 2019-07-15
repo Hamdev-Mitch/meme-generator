@@ -13,91 +13,59 @@
 
 <body>
   <!-- NAV BAR START-->
-  <nav class="uk-navbar-container uk-margin" uk-navbar>
-    <div class="uk-navbar-center">
-      <div class="uk-navbar-center-left">
-        <div>
-          <ul class="uk-navbar-nav">
-            <li>
-              <a href="#">about</a>
-              <div class="uk-navbar-dropdown">
-                <ul class="uk-nav uk-navbar-dropdown-nav">
-                  <li class="uk-active"><a href="#">bla</a></li>
-                  <li><a href="#">Item</a></li>
-                  <li><a href="#">Item</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <a class="uk-navbar-item uk-logo" href="#">
-        <h1 class="navLogo">memeGen</h1>
-      </a>
-      <div class="uk-navbar-center-right">
-        <div>
-          <ul class="uk-navbar-nav">
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
   <!-- NAV BAR END -->
   <!-- MAIN CONTAINER START -->
   <!-- TITLE CONTAINER START -->
   <div class="uk-container uk-background-muted" id="main">
     <div class="titleContainer">
-      <h1>Meme Generator</h1>
+      <!-- <img src="assets/megustaMeme.png" alt="Megusta Image"> -->
+      <h1 id="titleFont">Meme Generator</h1>
     </div>
 <!-- TITLE CONTAINER END -->
 
 <!-- MEME GENERATOR CONTAINER START -->
-    <div class="uk-child-width-expand@s" uk-grid>
-      <div class="uk-grid-item-match">
-        <div id="image-container" class="uk-card uk-card-default uk-card-body">
-          <canvas width="500" height="500"></canvas>
-        </div>
-      </div>
-      <div>
-      <div>
-          <input type="file" id="file"/>
-        </div>
-        <br>
-        <span><h3>TOP TEXT</h3></span>
-        <div class="uk-margin">
-          <input id ="topLineText" class="uk-input uk-form-width-medium" type="text" placeholder="Enter Top Text">
-        </div>
-        <br/>
-        <span><h3>BOTTOM TEXT</h3></span>
-        <div class="uk-margin">
-          <input id ="bottomLineText" class="uk-input uk-form-width-medium" type="text" placeholder="Enter Bottom Text">
-        </div>
-        <br/>
-        <button id ="saveBtn" class="uk-button uk-button-secondary uk-button-large">Save</button>
-      </div>
-    </div>
-    <!-- MEME GENERATOR CONTAINER END -->
+<div>
+  <h2 class="purpleH2">UPLOAD YOUR OWN IMAGE</h2>
+  <input class= "chooseFile" type="file" id="file" />
+</div>
+<br>
+<div id="image-container">
+  <br>
+  <canvas width="500" height="500" style="border:3px solid #eee";></canvas>
+  <br>
+  <div>
     <br>
+    <h2 class="purpleH2">ADD YOUR TEXT</h2>
+    <span>Top Line:</span><br/>
+    <input id="topLineText" class ="uk-button uk-button-default" type="text">
+    <br/>
+    <br>
+    <span>Bottom Line:</span><br/>
+    <input id="bottomLineText" class ="uk-button uk-button-default" type="text">
+    <br/>
+    <br>
+    <button id="saveBtn" class ="uk-button uk-button-default">Save</button>
+    <br>
+    <br>
+  </div>
+</div>
 
-    <!-- CHANGE PHOTO BUTTONS CONTAINER START -->
-    <div class="uk-animation-toggle" id="buttonContainer" tabindex="0">
-      <div class="uk-card uk-card-default uk-card-body">
-        <!-- Buttons to select default Meme Image -->
-        <h2>Change Picture</h2>
-        <p uk-margin>
-          <button id="badLuckBrianBtn" class="uk-button uk-button-default uk-button-large">Bad Luck Brian</button>
-          <button class="uk-button uk-button-default uk-button-large">One Does Not Simply</button>
-          <button class="uk-button uk-button-default uk-button-large">Kermit Tea</button>
-          <button class="uk-button uk-button-default uk-button-large">Lucky Baby</button>
-          <br>
-          <button class="uk-button uk-button-default uk-button-large">Awkward Seal</button>
-          <button class="uk-button uk-button-default uk-button-large">Burnt Microwave</button>
-          <button class="uk-button uk-button-default uk-button-large">Trump</button>
-          <button class="uk-button uk-button-default uk-button-large">Steve Carrell</button>
-      </div>
-    </div>
-    <!-- CHANGE PHOTO BUTTONS CONTAINER END -->
+<div class="container">
+</div>
+<h2 class="purpleH2">SAVE ONE FROM THE LIST BELOW</h2>
+<p>Right-click 'Save Image As' then upload above.</p>
+<ul class="flex-container">
+  <li class="flex-item"><img src="assets/andItsGone.jpg" alt="And It's Gone Meme"></li>
+  <li class="flex-item"><img src="assets/awkwardSeal.jpg" alt="Awkward Seal Meme"></li>
+  <li class="flex-item"><img src="assets/luckBaby.jpg" alt="Lucky Baby Meme"></li>
+  <li class="flex-item"><img src="assets/badLuckBrian.jpeg" alt="Bad Luck Brian Meme"></li>
+  <li class="flex-item"><img src="assets/noneOfMyBusiness.jpeg" alt="None Of My Business Meme"></li>
+  <li class="flex-item"><img src="assets/oneDoesNotSimply.jpg" alt="One Does Not Simply Meme"></li>
+  <li class="flex-item"><img src="assets/steveCarrelNo.jpg" alt="Steve Carrel No Meme"></li>
+  <li class="flex-item"><img src="assets/trumpMeme.jpeg" alt="Trump Meme"></li>
+</ul>
+<br>
+</div>
 
 
     <!-- FOOTER START -->

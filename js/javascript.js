@@ -1,12 +1,12 @@
-// This code is taken from the UDACITY HTML Canvas Course (URL: )
+// This code is adapted from the UDACITY HTML Canvas Course (URL: https://gist.github.com/jwill/d017253e2bb1d3c91c84 )
+
 function textChangeListener (evt) {
   var id = evt.target.id;
   var text = evt.target.value;
 
-  if (id == "topLineText"){
+  if (id == "topLineText") {
     window.topLineText = text;
-  }
-  else{
+  } else {
     window.bottomLineText = text;
   }
 
@@ -15,69 +15,66 @@ function textChangeListener (evt) {
 
 function redrawMeme(image, topLine, bottomLine) {
   // Get Canvas2DContext
-  // Use the DOM to select the canvas which has an ID of 'c'.
+  // Use the DOM to select the canvas which has an ID of 'canvas'.
   var canvas = document.querySelector('canvas');
   var ctx = canvas.getContext("2d");
-  //My code here
   if (image != null)
-  // draw image in the top left corner that fills the canvas
-  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-  // Text Attributes
-  ctx.font = "36pt Impact";
-  ctx.textAlign = "center";
-  ctx.fillStyle = "white";
-  ctx.strokeStyle = "black";
+  // Text attributes
+  ctx.font = '36pt Impact';
+  ctx.textAlign = 'center';
+  ctx.strokeStyle = 'black';
   ctx.lineWidth = 3;
+  ctx.fillStyle = 'white';
 
   if (topLine != null) {
-    ctx.fillText(topline, canvas.width / 2, 40);
+    ctx.fillText(topLine, canvas.width / 2, 40);
     ctx.strokeText(topLine, canvas.width / 2, 40);
   }
 
-if (bottomLine != null) {
-  ctx.fillText(bottomLine, canvas.width / 2, canvas.height - 20);
-  ctx.strokeText(bottomLine, canvas.width / 2, canvas.height - 20);
-}
+  if (bottomLine != null) {
+    ctx.fillText(bottomLine, canvas.width / 2, canvas.height - 20);
+    ctx.strokeText(bottomLine, canvas.width / 2, canvas.height - 20);
+  }
 }
 
-function saveFile(){
+function saveFile() {
   window.open(document.querySelector('canvas').toDataURL());
 }
 
-function handleFileSelect(evt){
+function handleFileSelect(evt) {
   var canvasWidth = 500;
   var canvasHeight = 500;
   var file = evt.target.files[0];
 
   var reader = new FileReader();
-       reader.onload = function(fileObject) {
-         var data = fileObject.target.result;
+  reader.onload = function(fileObject) {
+    var data = fileObject.target.result;
 
-      // Create an image object
-      //Constructor Function for Image
-       var image = new Image();
-      // Make a function that happens when the image is loaded
-       image.onload = function() {
+    // Create an image object
+     //Constructor Function for Image
+    var image = new Image();
+    image.onload = function() {
 
-         window.imageSrc = this;
-         redrawMeme(window.imageSrc, null, null);
-       };
+      window.imageSrc = this;
+      redrawMeme(window.imageSrc, null, null);
+    };
 
-       // Set image data to background image.
-        image.src = data;
-        console.log(fileObject.target.result);
-      };
+    // Set image data to background image.
+    image.src = data;
+    console.log(fileObject.target.result);
+  };
   reader.readAsDataURL(file);
-    }
+}
 
-    window.topLineText = "";
-    window.bottomLineText = "";
-    var input1 = document.getElementById('topLineText');
-    var input2 = document.getElementById('bottomLineText');
-    input1.oninput = textChangeListener;
-    input2.oninput = textChangeListener;
-    document.getElementById('file').addEventListener('change', handleFileSelect, false);
-    document.getElementById('saveBtn').addEventListener('click', saveFile, false);
+window.topLineText = "";
+window.bottomLineText = "";
+var input1 = document.getElementById('topLineText');
+var input2 = document.getElementById('bottomLineText');
+input1.oninput = textChangeListener;
+input2.oninput = textChangeListener;
+document.getElementById('file').addEventListener('change', handleFileSelect, false);
+document.querySelector('button').addEventListener('click', saveFile, false);
 
-    document.getElementById('badLuckBrianBtn').addEventListener('change', handleFileSelect, false);
+  document.getElementById('badLuckBrianBtn').addEventListener('change', handleFileSelect, false);

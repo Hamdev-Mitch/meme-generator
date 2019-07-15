@@ -1,1 +1,106 @@
 
+html {
+  background-color: #8559a5;
+}
+
+body {
+  background-color: #8559a5;
+  text-align: center;
+}
+
+#main{
+  background-color: #EAEAEA;
+  color: #8559a5;
+}
+
+#image-container {
+  background-color: #00bdaa;
+}
+
+.titleContainer{
+  background-color: #8559a5;
+}
+
+.chooseFile {
+  padding-left: 120px;
+  font-size: 1rem;
+}
+
+#titleFont {
+  font-size: 4rem;
+  color: #EAEAEA;
+}
+
+.purpleH2 {
+  color: #8559a5;
+}
+
+
+
+/* FLEXBOX */
+@import "compass/css3";
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background: #a1dd70;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  line-height: 150px;
+  /* color: white; */
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  object-fit: fill;
+
+}
+
+img {
+  width: 190px;
+  height: 190px;
+  object-fit: fill;
+}
+
+/* Large */
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .navigation {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .navigation {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+
+footer {
+  color: #EAEAEA;
+}
