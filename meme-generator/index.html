@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="css/master.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" />
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+  <!-- NAV BAR START-->
+  <!-- NAV BAR END -->
+  <!-- MAIN CONTAINER START -->
+  <!-- TITLE CONTAINER START -->
+  <div class="uk-container uk-background-muted" id="main">
+    <div class="titleContainer">
+      <!-- <img src="assets/megustaMeme.png" alt="Megusta Image"> -->
+      <h1 id="titleFont">Meme Generator</h1>
+    </div>
+<!-- TITLE CONTAINER END -->
+
+<!-- MEME GENERATOR CONTAINER START -->
+<div>
+  <h2 class="purpleH2">UPLOAD YOUR OWN IMAGE</h2>
+  <input class= "chooseFile" type="file" id="file" />
+</div>
+<br>
+<div id="image-container">
+  <br>
+  <canvas width="500" height="500" style="border:3px solid #eee";></canvas>
+  <br>
+  <div>
+    <br>
+    <h2 class="purpleH2">ADD YOUR TEXT</h2>
+    <span>Top Line:</span><br/>
+    <input id="topLineText" class ="uk-button uk-button-default" type="text">
+    <br/>
+    <br>
+    <span>Bottom Line:</span><br/>
+    <input id="bottomLineText" class ="uk-button uk-button-default" type="text">
+    <br/>
+    <br>
+    <button id="saveBtn" class ="uk-button uk-button-default">Save</button>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="container">
+</div>
+<h2 class="purpleH2">SAVE ONE FROM THE LIST BELOW</h2>
+<p>Right-click 'Save Image As' then upload above.</p>
+<ul class="flex-container">
+  <li class="flex-item"><img src="assets/andItsGone.jpg" alt="And It's Gone Meme"></li>
+  <li class="flex-item"><img src="assets/awkwardSeal.jpg" alt="Awkward Seal Meme"></li>
+  <li class="flex-item"><img src="assets/luckBaby.jpg" alt="Lucky Baby Meme"></li>
+  <li class="flex-item"><img src="assets/badLuckBrian.jpeg" alt="Bad Luck Brian Meme"></li>
+  <li class="flex-item"><img src="assets/noneOfMyBusiness.jpeg" alt="None Of My Business Meme"></li>
+  <li class="flex-item"><img src="assets/oneDoesNotSimply.jpg" alt="One Does Not Simply Meme"></li>
+  <li class="flex-item"><img src="assets/steveCarrelNo.jpg" alt="Steve Carrel No Meme"></li>
+  <li class="flex-item"><img src="assets/trumpMeme.jpeg" alt="Trump Meme"></li>
+</ul>
+<br>
+</div>
+
+
+    <!-- FOOTER START -->
+    <footer>
+      <p>Created by Mitch Hamilton from <a href="https://www.hamdev.net/">HAMDEV</a>
+      </p>
+    </footer>
+  </div>
+  <!-- FOOTER END -->
+  <!-- MAIN CONTAINER END-->
+
+  <script src="js/javascript.js" charset="utf-8"></script>
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
+</body>
+
+</html>
